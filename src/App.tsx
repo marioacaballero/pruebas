@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Browser from "./components/Browser/Browser";
+import Google from "./components/GoogleApis/Google";
 
 function App() {
   const [action, setAction] = useState<string>("browser");
@@ -18,6 +19,8 @@ function App() {
       </select>
 
       {action === "browser" ? <Browser /> : <></>}
+
+      <Google />
     </>
   );
 }
